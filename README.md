@@ -4,7 +4,7 @@
 Video Caption App is a simple web application that allows users to add captions to a hosted video. Users can enter a video URL, add captions with timestamps, and view the video with synchronized captions.
 
 ## 🌐 Hosted Version
-Check out the live version here: [Video Caption App](https://example.com)
+Check out the live version here: [Video Caption App](https://video-caption-app-nk4u.vercel.app/)
 
 ## ✨ Features
 - 🎥 Enter a URL for a hosted video
