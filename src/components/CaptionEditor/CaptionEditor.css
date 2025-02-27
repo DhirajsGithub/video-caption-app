@@ -1,0 +1,93 @@
+.caption-editor {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+  }
+  
+  .caption-editor h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-size: 1.4rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  textarea, input[type="text"] {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+  }
+  
+  textarea:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #3a86ff;
+    box-shadow: 0 0 0 2px rgba(58, 134, 255, 0.2);
+  }
+  
+  .time-input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .time-input-group input {
+    flex: 1;
+  }
+  
+  .time-button {
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .time-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .add-caption-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-caption-button:hover {
+    background-color: #2a76ef;
+  }
