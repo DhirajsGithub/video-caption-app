@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useAppContext } from '../../context/AppContext';
 import { useVideoTime } from '../../hooks/useVideoTime';
 import './VideoPlayer.css';

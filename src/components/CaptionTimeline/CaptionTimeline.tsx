@@ -6,7 +6,7 @@ import './CaptionTimeline.css';
 
 const CaptionTimeline: React.FC = () => {
   const { state, updateCaption, deleteCaption } = useAppContext();
-  const { captions, currentTime, videoUrl } = state;
+  const { captions, currentTime } = state;
   
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editForm, setEditForm] = useState<Caption | null>(null);

@@ -10,7 +10,7 @@ import './App.css';
 const SAMPLE_VIDEO_URL = "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4";
 
 const VideoSection: React.FC = () => {
-  const { state, setVideoUrl } = useAppContext();
+  const { setVideoUrl } = useAppContext();
   const [inputValue, setInputValue] = useState('');
   
   const handleVideoUrlSubmit = (e: React.FormEvent) => {
