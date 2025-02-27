@@ -1,54 +1,92 @@
-# React + TypeScript + Vite
+# 🎬 Video Caption App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
+Video Caption App is a simple web application that allows users to add captions to a hosted video. Users can enter a video URL, add captions with timestamps, and view the video with synchronized captions.
 
-Currently, two official plugins are available:
+## 🌐 Hosted Version
+Check out the live version here: [Video Caption App](https://example.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- 🎥 Enter a URL for a hosted video
+- 📝 Provide captions and specify timestamps
+- ⏯ Play/Pause the video
+- ✏️ Edit or delete captions easily
+- 📜 View captions synchronized with video playback
+- 📱 Responsive and user-friendly UI
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
+- **Frontend:** React, TypeScript, Vite
+- **State Management:** React Context API
+- **Styling:** CSS (No Tailwind)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📂 Folder Structure
+```
+/src
+  /components
+    /VideoPlayer
+      VideoPlayer.tsx
+      VideoPlayer.css
+    /CaptionEditor
+      CaptionEditor.tsx
+      CaptionEditor.css
+    /CaptionTimeline
+      CaptionTimeline.tsx
+      CaptionTimeline.css
+  /types
+    index.ts
+  /context
+    AppContext.tsx
+  /utils
+    timeFormat.ts
+  /hooks
+    useVideoTime.ts
+  App.tsx
+  main.tsx
+  index.css
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚡ Setup Instructions
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🏗 Local Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/DhirajsGithub/video-caption-app.git
+   cd video-caption-app
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+4. Open the app in your browser:
+   ```sh
+   http://localhost:5173
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+
+## 🔍 Technical Decisions & Trade-offs
+- **Vite & TypeScript**: Chosen for fast builds, optimized performance, and type safety.
+- **Context API**: Used for global state management to keep track of captions and video metadata.
+- **CSS Modules**: Ensures component-level styling without conflicts.
+- **No Tailwind**: Styled using pure CSS for a structured approach as per requirements.
+- **Component Modularity**: VideoPlayer, CaptionEditor, and CaptionTimeline are separate components for better maintainability.
+
+## 🔮 Future Enhancements
+- 🎛 Drag-and-drop caption timeline editor for better UX
+- 🌍 Support for multiple caption tracks
+- 🤖 Auto-caption generation using AI
+- 🌙 Dark mode support
+
+## 🏭 Running in Production
+To build and serve the app:
+```sh
+npm run build
+npm run preview
 ```

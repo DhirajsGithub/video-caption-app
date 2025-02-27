@@ -7,6 +7,8 @@ import CaptionTimeline from './components/CaptionTimeline/CaptionTimeline';
 import { useAppContext } from './context/AppContext';
 import './App.css';
 
+const SAMPLE_VIDEO_URL = "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4";
+
 const VideoSection: React.FC = () => {
   const { state, setVideoUrl } = useAppContext();
   const [inputValue, setInputValue] = useState('');
@@ -16,10 +18,15 @@ const VideoSection: React.FC = () => {
     setVideoUrl(inputValue);
   };
 
+  const handleQuickStart = () => {
+    setInputValue(SAMPLE_VIDEO_URL);
+    setVideoUrl(SAMPLE_VIDEO_URL);
+  };
+
   return (
     <>
       <div className="url-input-container">
-        <form onSubmit={handleVideoUrlSubmit}>
+        <form onSubmit={handleVideoUrlSubmit} className="input-form">
           <input
             type="url"
             value={inputValue}
@@ -28,17 +35,15 @@ const VideoSection: React.FC = () => {
             required
           />
           <button type="submit">Load Video</button>
+          <button className="quick-start" onClick={handleQuickStart}>Quick Start</button>
         </form>
       </div>
       
       <div className="main-content">
         <VideoPlayer />
-        
-        <div className="caption-tools">
-          <CaptionEditor />
-          <CaptionTimeline />
-        </div>
+        <CaptionEditor />
       </div>
+      <CaptionTimeline />
     </>
   );
 };
@@ -55,7 +60,7 @@ const App: React.FC = () => {
         <VideoSection />
         
         <footer className="app-footer">
-          <p>Video Caption Editor &copy; {new Date().getFullYear()}</p>
+          <p>Video Caption Editor by Dhiraj &copy; {new Date().getFullYear()}</p>
         </footer>
       </div>
     </AppProvider>

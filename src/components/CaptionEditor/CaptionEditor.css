@@ -57,6 +57,7 @@
   
   .time-input-group input {
     flex: 1;
+    min-width: 110px;
   }
   
   .time-button {

@@ -42,10 +42,6 @@ const CaptionTimeline: React.FC = () => {
     }
   };
   
-  if (!videoUrl) {
-    return null;
-  }
-  
   return (
     <div className="caption-timeline">
       <h2>Caption Timeline</h2>
